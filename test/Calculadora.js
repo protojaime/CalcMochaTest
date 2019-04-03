@@ -101,7 +101,10 @@ describe('#Calculadora.calc()', function () {
     context('with invalid evaluation result string', function () {
         it('state should change to -1', function () {
             calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
-            calc.display('a')
+            calc.display(5)
+            calc.display(5)
+            calc.displayOp('-')
+            calc.displayOp('-')
             calc.calc()
             expect(calc.estado).to.equal(-1)
         })
@@ -110,7 +113,7 @@ describe('#Calculadora.calc()', function () {
             calc.display(5)
             calc.display(5)
             calc.displayOp('-')
-            calc.display('a')
+            calc.displayOp('-')
             calc.calc()
             expect(calc.resultado).to.equal('ERROR');
         })
