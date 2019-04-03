@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="CalculadoraCientifica.css" />
+    <script src="CalculadoraCientifica.js"></script>
+</head>
+
+<body>
+    <h1>Calculadora cientifica</h1>
+    <p>
+        <input type="text" id="resultado" disabled />
+    </p>
+    <p>
+    </p>
+    <p>
+        <input type="button" class="otros" value="Sin" onclick="calc.hacer('Math.sin(')" />
+        <input type="button" class="otros" value="Cos" onclick="calc.hacer('Math.cos(')" />
+        <input type="button" class="otros" value="Tan" onclick="calc.hacer('Math.tan(')" />
+        <input type="button" class="otros" value="log" onclick="calc.hacer('Math.log(')" />
+        <input type="button" class="otros" value="pi" onclick="calc.pi()" />
+    </p>
+    <p>
+        <input type="button" class="otros" value="10^x" onclick="calc.diezElevado()" />
+        <input type="button" class="otros" value="sqrt" onclick="calc.hacer('Math.sqrt(')" />
+        <input type="button" class="memoria" value="mrc" onclick="calc.displayMrc()" />
+        <input type="button" class="memoria" value="m-" onclick="calc.mrmenos()" />
+        <input type="button" class="memoria" value="m+" onclick="calc.mrmas()" />
+        <input type="button" class="operacion" value="&#47;" onclick="calc.displayOp('/')" />
+    </p>
+    <p>
+        <input type="button" class="otros" value="x&sup2;" onclick="calc.cuadrado()" />
+        <input type="button" class="otros" value="x&sup3;" onclick="calc.cubo()" />
+        <input type="button" class="numero" value="7" onclick="calc.display(7)" />
+        <input type="button" class="numero" value="8" onclick="calc.display(8)" />
+        <input type="button" class="numero" value="9" onclick="calc.display(9)" />
+
+        <input type="button" class="operacion" value="&#42;" onclick="calc.displayOp('*')" />
+
+    </p>
+    <p>
+        <input type="button" class="otros" value="Exp" onclick="calc.hacer('Math.exp(')" />
+        <input type="button" class="otros" value="abs" onclick="calc.hacer('Math.abs(')" />
+        <input type="button" class="numero" value="4" onclick="calc.display(4)" />
+        <input type="button" class="numero" value="5" onclick="calc.display(5)" />
+        <input type="button" class="numero" value="6" onclick="calc.display(6)" />
+
+        <input type="button" class="operacion" value="&#43;" onclick="calc.displayOp('+')" />
+
+    </p>
+    <p>
+        <input type="button" class="otros" value="roundDWN" onclick="calc.hacer('Math.ceil(')" />
+        <input type="button" class="otros" value="roundUP" onclick="calc.hacer('Math.floor(')" />
+        <input type="button" class="numero" value="1" onclick="calc.display(1)" />
+        <input type="button" class="numero" value="2" onclick="calc.display(2)" />
+        <input type="button" class="numero" value="3" onclick="calc.display(3)" />
+
+        <input type="button" class="operacion" value="&#45;" onclick="calc.displayOp('-')" />
+    </p>
+    <p>
+        <input type="button" class="numero" value="&#40;" onclick="calc.displayOp('(')" />
+        <input type="button" class="numero" value="&#41;" onclick="calc.displayOp(')')" />
+        <input type="button" class="numero" value="0" onclick="calc.display(0)" />
+        <input type="button" class="numero" value="&#46;" onclick="calc.display('.')" />
+        <input type="button" class="numero" value="C" onclick="calc.c()" />
+        <input type="button" id="equals" value="=" onclick="calc.calc()" />
+    </p>
+
+</body>
+
+</html>

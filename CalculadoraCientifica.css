@@ -1,0 +1,77 @@
+html {
+	
+	background: white;
+	background: radial-gradient(circle, #fff 24%, #CCE);
+	background-size: cover;
+}
+h1 {
+      background-color:#FF5733; 
+      color: #fff;
+      text-transform: uppercase;
+      padding: 100px 25px;
+      text-align: center;     
+  }
+body {
+      font: 400 15px Tahoma, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+      background-color: #f6f6f6;
+        text-align: center;  
+        align-content: center;
+        display: flex;
+        flex-flow: column;
+        max-width: 40em;   
+         margin: auto;
+  }
+p{
+  display: flex;
+        flex-flow: row;
+        flex: 1;
+        margin:0.25em;
+}
+input{
+  flex: 1;
+  color:#fff;
+    background-color: #444651;
+    box-shadow: 1px 3px 1px 1px black;
+}
+input:hover{
+	background-color: #BEF9F0;
+	color: #6C73FA;
+	transition:0.2s;
+}
+input:active{
+	box-shadow: 0px 1px 1px 0px #444651;
+}
+#resultado{
+      text-align: center;  
+  
+     max-width:50em;
+    max-height:8em;
+    background: #f6f6f6;
+    color: #444651;
+}
+
+input[type=button]{
+ 
+     max-height:8em;
+}
+input[class="numero"]{
+    background:grey;
+}
+
+input[class="otros"]{
+    background:orange;
+    color: #444651;
+}
+input[class="memoria"]{
+    background: #BEF9F0;
+    color: #444651;
+}
+input[class="operacion"]{
+    background:red;
+}
+#equals{
+   background:#6C73FA;
+   
+}
