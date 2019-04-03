@@ -10,8 +10,8 @@ class Calculadora {
 
             this.estado = 0;
         } catch (e) {
-            alert('la expresion compuesta no es computable. borra y empieza de nuevo');
-
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
+            this.resultado = 'ERROR'
         }
 
     }
@@ -49,11 +49,13 @@ class CalculadoraCientifica extends Calculadora {
         this.resultado = this.mr;
     }
 
+
+
     mrmas() {
         try {
             this.mr = this.mr + eval(this.resultado);
         } catch (e) {
-            alert('la expresion compuesta no es computable. borra y empieza de nuevo');
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
 
         }
 
@@ -63,7 +65,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.mr = this.mr - eval(this.resultado);
         } catch (e) {
-            alert('la expresion compuesta no es computable. borra y empieza de nuevo');
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
 
         }
     }
@@ -78,7 +80,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(Math.pow(this.resultado, 2));
         } catch (e) {
-            alert('la expresion compuesta no es computable. borra y empieza de nuevo');
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
 
         }
     }
@@ -86,7 +88,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(Math.pow(10, this.resultado));
         } catch (e) {
-            alert('la expresion compuesta no es computable. borra y empieza de nuevo');
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
 
         }
     }
@@ -95,7 +97,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(operacion + this.resultado + ")");
         } catch (e) {
-            alert('la expresion compuesta no es computable. borra y empieza de nuevo');
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
         }
 
     }
@@ -103,12 +105,11 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(Math.pow(this.resultado, 3));
         } catch (e) {
-            alert('la expresion compuesta no es computable. borra y empieza de nuevo');
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
         }
     }
 
 }
 
 
-
-var calc = new CalculadoraCientifica();
+module.exports = CalculadoraCientifica;
