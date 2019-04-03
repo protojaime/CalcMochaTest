@@ -30,7 +30,7 @@ describe('#Calculadora.c()', function () {
             calc.display(5)
             expect(calc.resultado).to.equal('5')
             calc.c()
-            expect(calc.resultado).to.equal('55')
+            expect(calc.resultado).to.equal('')
         })
     })
 })
