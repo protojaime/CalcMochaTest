@@ -1,0 +1,24 @@
+{
+  "name": "calcmochatest",
+  "version": "1.0.0",
+  "description": "Mucha test with a JS calculator",
+  "main": "CalculadoraCientifica.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protojaime/CalcMochaTest.git"
+  },
+  "keywords": [
+    "JS",
+    "Mocha",
+    "html"
+  ],
+  "author": "Jaime Fernandez Suarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/protojaime/CalcMochaTest/issues"
+  },
+  "homepage": "https://github.com/protojaime/CalcMochaTest#readme"
+}
