@@ -1,13 +1,13 @@
 
-var CalculadoraCientifica = require('../CalculadoraCientifica');
+var Calculadora = require('../Calculadora');
 var expect = require('chai').expect;
 
-var calc = new CalculadoraCientifica();
+var calc = new Calculadora();
 
 
 
 
-describe('#CalculadoraCientifica.display()', function () {
+describe('#Calculadora.display()', function () {
     context('with state 0', function () {
         it('should change the state to 1', function () {
             calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
@@ -39,7 +39,7 @@ describe('#CalculadoraCientifica.display()', function () {
 })
 
 
-describe('#CalculadoraCientifica.displayOp()', function () {
+describe('#Calculadora.displayOp()', function () {
     context('with state 0', function () {
         it('should change the state to 1', function () {
             calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
@@ -75,7 +75,7 @@ describe('#CalculadoraCientifica.displayOp()', function () {
     })
 })
 
-describe('#CalculadoraCientifica.calc()', function () {
+describe('#Calculadora.calc()', function () {
     context('with valid evaluation result string', function () {
         it('should change the state to 1', function () {
             calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
