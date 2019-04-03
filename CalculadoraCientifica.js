@@ -10,13 +10,12 @@ class Calculadora {
 
             this.estado = 0;
         } catch (e) {
-            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
-            this.resultado = 'ERROR'
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1; this.resultado = 'ERROR'
         }
 
     }
     display(number) {
-        if (this.estado == 0) {
+        if (this.estado <= 0) {
             this.estado = 1;
             this.resultado = "";
         }
@@ -24,7 +23,9 @@ class Calculadora {
     }
 
     displayOp(operation) {
-
+        if (this.estado < 0) {
+            this.resultado = "";
+        }
         this.estado = 1;
         this.resultado += operation;
     }
@@ -55,7 +56,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.mr = this.mr + eval(this.resultado);
         } catch (e) {
-            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1; this.resultado = 'ERROR'
 
         }
 
@@ -65,7 +66,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.mr = this.mr - eval(this.resultado);
         } catch (e) {
-            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1; this.resultado = 'ERROR'
 
         }
     }
@@ -80,7 +81,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(Math.pow(this.resultado, 2));
         } catch (e) {
-            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1; this.resultado = 'ERROR'
 
         }
     }
@@ -88,7 +89,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(Math.pow(10, this.resultado));
         } catch (e) {
-            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1; this.resultado = 'ERROR'
 
         }
     }
@@ -97,7 +98,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(operacion + this.resultado + ")");
         } catch (e) {
-            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1; this.resultado = 'ERROR'
         }
 
     }
@@ -105,7 +106,7 @@ class CalculadoraCientifica extends Calculadora {
         try {
             this.resultado = eval(Math.pow(this.resultado, 3));
         } catch (e) {
-            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1;
+            console.log('la expresion compuesta no es computable. borra y empieza de nuevo'); this.estado = -1; this.resultado = 'ERROR'
         }
     }
 

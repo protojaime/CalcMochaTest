@@ -7,7 +7,7 @@ var calc = new CalculadoraCientifica();
 
 
 
-describe('#display()', function () {
+describe('#CalculadoraCientifica.display()', function () {
     context('with state 0', function () {
         it('should change the state to 1', function () {
             calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
@@ -39,7 +39,7 @@ describe('#display()', function () {
 })
 
 
-describe('#calc.displayOp()', function () {
+describe('#CalculadoraCientifica.displayOp()', function () {
     context('with state 0', function () {
         it('should change the state to 1', function () {
             calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
@@ -75,7 +75,7 @@ describe('#calc.displayOp()', function () {
     })
 })
 
-describe('#calc.calc()', function () {
+describe('#CalculadoraCientifica.calc()', function () {
     context('with valid evaluation result string', function () {
         it('should change the state to 1', function () {
             calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
