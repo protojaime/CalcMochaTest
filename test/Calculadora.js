@@ -3,10 +3,37 @@ var Calculadora = require('../Calculadora');
 var expect = require('chai').expect;
 
 var calc = new Calculadora();
-
-
-
-
+describe('#Calculadora.c()', function () {
+    context('with empty result', function () {
+        it('should change the state to 1', function () {
+            calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
+            calc.c()
+            expect(calc.estado).to.equal(1)
+        })
+        it('should set the result field as empty', function () {
+            calc.estado = 0;//estado=0 is after an operation is completed, therefore it's faster to just set it up
+            calc.resultado = 2
+            calc.c()
+            expect(calc.resultado).to.equal('')
+        })
+    })
+    context('with state 1', function () {
+        it('state should remain on 1', function () {
+            calc.c()
+            calc.display(5)
+            expect(calc.estado).to.equal(1)
+            calc.c()
+            expect(calc.estado).to.equal(1)
+        })
+        it('should set the result field as empty', function () {
+            calc.c()
+            calc.display(5)
+            expect(calc.resultado).to.equal('5')
+            calc.c()
+            expect(calc.resultado).to.equal('55')
+        })
+    })
+})
 describe('#Calculadora.display()', function () {
     context('with state 0', function () {
         it('should change the state to 1', function () {
